@@ -1,8 +1,7 @@
-Sample Android App Using Keen
+Sample Android Weather app
 =============================
 
-This is a sample Android App that uses the [Keen IO Java/Android SDK](https://github.com/keenlabs/KeenClient-Java)
-to capture and upload events to Keen IO.
+This is a sample weatherapp thats shows the selected locations weather 
 
 ## Building the Sample App
 
