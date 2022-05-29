@@ -7,14 +7,9 @@ This is a sample weatherapp thats shows the selected locations weather
 
 First, clone the repo:
 
-`git clone git@github.com:keenlabs/KeenClient-Android-Sample.git`
+`git clone 'https://github.com/binokbenny77/WeatherApp.git'
 
-Next, you will need to have a Keen IO project to send events to. Create one via the Keen IO web interface if you haven't already.
 
-Open the file `app/src/main/res/values/keen.xml` and enter the project ID/read key/write key for your project, as well as your
-collection name.
-
-Building the sample then depends on your build tools.
 
 ### Android Studio (Recommended)
 
