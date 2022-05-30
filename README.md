@@ -69,8 +69,11 @@ Connect an Android device to your development machine.
 <li><a href="https://developer.android.com/topic/libraries/architecture/room">RoomDB</a></li>
 <li><a href="https://developer.android.com/training/dependency-injection/hilt-android">Hilt</a></li>
 
-## Testing 🧪
+## Testing 
 <li><a href="https://github.com/mockk/mockk">Mockk</a></li>
 <li><a href="https://github.com/google/truth">Truth</a></li>
 
+
+## Architecture
+The app uses MVVM [Model-View-ViewModel] architecture to have a unidirectional flow of data, separation of concern, testability, and a lot more.
 
