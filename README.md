@@ -24,12 +24,6 @@ First, clone the repo:
 
 * Build the APK: `./gradlew build`
 
-### Eclipse
-
-* Download the latest Android SDK from [Maven Central](http://repo1.maven.org/maven2/io/keen/keen-client-api-android)
-  * Note: We publish both an AAR and a JAR; you may use whichever is more convenient based on your infrastructure and needs.
-
-
 ## Running the Sample App
 
 Connect an Android device to your development machine.
@@ -39,20 +33,45 @@ Connect an Android device to your development machine.
 * Select `Run -> Run 'app'` (or `Debug 'app'`) from the menu bar
 * Select the device you wish to run the app on and click 'OK'
 
-### Gradle
 
-* Install the debug APK on your device `./gradlew installDebug`
-* Start the APK: `<path to Android SDK>/platform-tools/adb -d shell am start io.keen.client.android.example/io.keen.client.android.example.MyActivity`
+## Libraries and tools 🛠
 
 
-## Using the Sample App
+<li><a href="https://github.com/ReactiveX/RxJava">RxJava</a></li>
+<li><a href="https://github.com/ReactiveX/RxAndroid">RxAndroid</a></li>
+<li><a href="https://github.com/ReactiveX/RxKotlin">RxKotlin</a></li>
+<li><a href="https://square.github.io/retrofit/">Retrofit</a></li>
+<li><a href="https://github.com/square/okhttp">OkHttp</a></li>
+<li><a href="https://github.com/square/moshi">Moshi</a></li>
+<li><a href="https://material.io/develop/android/docs/getting-started/">Material Design</a></li>
+<li><a href="https://github.com/lopspower/RxAnimation">RxAnimation</a></li>
+<li><a href="https://github.com/JakeWharton/ThreeTenABP">ThreeTenABP</a></li>
+<li><a href="https://github.com/algolia/algoliasearch-client-android">Algolia Search API Client for Android</a></li>
+<li><a href="https://developer.android.com/topic/libraries/architecture/navigation/">Navigation</a></li>
+<li><a href="https://developer.android.com/training/data-storage/shared-preferences">Shared Preferences</a></li>
+<li><a href="https://developer.android.com/topic/libraries/architecture/viewmodel">ViewModel</a></li>
+<li><a href="https://developer.android.com/topic/libraries/architecture/livedata">LiveData</a></li>
+<li><a href="https://github.com/facebook/stetho">Stetho</a></li>
+<li><a href="https://github.com/square/picasso">Picasso</a></li>
+<li><a href="https://developer.android.com/reference/androidx/lifecycle/Transformations">Transformations</a></li>
+<li><a href="https://developer.android.com/topic/libraries/data-binding">Data Binding</a></li>
+<li><a href="https://developer.android.com/topic/libraries/architecture/room">RoomDB</a></li>
+<li><a href="https://developer.android.com/training/dependency-injection/hilt-android">Hilt</a></li>
 
-Each time you press the "Send Event!" button the sample app queues an event to be sent to the Keen API with an increasing
-counter. Note that the events will not actually be sent until the activity's `onPause` method is called, so you will need
-to exit the app or otherwise cause `onPause` to be called to cause events to be sent. (Rotating your device to cause an
-orientation change is one trick, but you can also just exit the app and re-open it.)
+## Testing 
+<li><a href="https://github.com/mockk/mockk">Mockk</a></li>
+<li><a href="https://github.com/google/truth">Truth</a></li>
 
-You can press the "Query!" button to issue a count query on the same collection with a timeframe of `this_24_hours`. The
-result will be shown in a toast.
 
-You should also be able to see the events show up in queries issued via the API or the web UI for your project.
+## Architecture
+The app uses MVVM [Model-View-ViewModel] architecture to have a unidirectional flow of data, separation of concern, testability, and a lot more.
+
+## Changing Build envoirnment
+For changing the build envoirnment goto Constant.kt file and set 
+    <li>private val defaultEnvironment = DEV for development</li>
+      <li> private val defaultEnvironment = PROD for production</li>
+
+## Inside application
+  <li>Splash screen</li>
+    <li>Home screen for showing the weather for the current location</li>
+    <li>Search screen for searching the location and click on *(star) for adding it into the davorite list</li>
