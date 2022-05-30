@@ -24,12 +24,6 @@ First, clone the repo:
 
 * Build the APK: `./gradlew build`
 
-### Eclipse
-
-* Download the latest Android SDK from [Maven Central](http://repo1.maven.org/maven2/io/keen/keen-client-api-android)
-  * Note: We publish both an AAR and a JAR; you may use whichever is more convenient based on your infrastructure and needs.
-
-
 ## Running the Sample App
 
 Connect an Android device to your development machine.
