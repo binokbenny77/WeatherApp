@@ -71,3 +71,7 @@ For changing the build envoirnment goto Constant.kt file and set
     <li>private val defaultEnvironment = DEV for development</li>
       <li> private val defaultEnvironment = PROD for production</li>
 
+## Inside application
+  <li>Splash screen</li>
+    <li>Home screen for showing the weather for the current location</li>
+    <li>Search screen for searching the location and click or **star** for adding it into the davorite list</li>
