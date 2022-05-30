@@ -77,3 +77,8 @@ Connect an Android device to your development machine.
 ## Architecture
 The app uses MVVM [Model-View-ViewModel] architecture to have a unidirectional flow of data, separation of concern, testability, and a lot more.
 
+## Changing Build envoirnment
+For changing the build envoirnment goto Constant.kt file and set 
+    private val defaultEnvironment = DEV for development 
+     private val defaultEnvironment = PROD for production
+
