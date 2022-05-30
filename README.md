@@ -39,11 +39,6 @@ Connect an Android device to your development machine.
 * Select `Run -> Run 'app'` (or `Debug 'app'`) from the menu bar
 * Select the device you wish to run the app on and click 'OK'
 
-### Gradle
-
-* Install the debug APK on your device `./gradlew installDebug`
-* Start the APK: `<path to Android SDK>/platform-tools/adb -d shell am start io.keen.client.android.example/io.keen.client.android.example.MyActivity`
-
 
 ## Libraries and tools 🛠
 
@@ -79,6 +74,6 @@ The app uses MVVM [Model-View-ViewModel] architecture to have a unidirectional f
 
 ## Changing Build envoirnment
 For changing the build envoirnment goto Constant.kt file and set 
-    private val defaultEnvironment = DEV for development 
-     private val defaultEnvironment = PROD for production
+    <li>private val defaultEnvironment = DEV for development</li>
+      <li> private val defaultEnvironment = PROD for production</li>
 
