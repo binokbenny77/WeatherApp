@@ -194,13 +194,13 @@ class DashboardFragment : BaseFragment<DashboardFragmentViewModel, FragmentDashb
     override fun onResume() {
         super.onResume()
         initFavorite(viewModel.favoriteList)
-        easyWayLocation?.endUpdates()
+        //easyWayLocation?.endUpdates()
 
     }
 
     override fun onPause() {
         super.onPause()
-        easyWayLocation?.startLocation()
+       // easyWayLocation?.startLocation()
     }
 
     private fun makeRequest() {
@@ -220,28 +220,28 @@ class DashboardFragment : BaseFragment<DashboardFragmentViewModel, FragmentDashb
     }
 
     override fun currentLocation(location: Location?) {
-
-        val lat = location?.latitude.toString()
-        val lon = location?.longitude.toString()
-        if (lat?.isNotEmpty() && lon?.isNotEmpty()) {
-            binding.viewModel?.setCurrentWeatherParams(
-                CurrentWeatherUseCase.CurrentWeatherParams(
-                    lat,
-                    lon,
-                    isNetworkAvailable(requireContext()),
-                    Constants.Coords.METRIC
-                )
-            )
-            binding.viewModel?.setForecastParams(
-                ForecastUseCase.ForecastParams(
-                    lat,
-                    lon,
-                    isNetworkAvailable(requireContext()),
-                    Constants.Coords.METRIC
-                )
-            )
-        }
-        saveCoordsToSharedPref(lat,lon)
+//
+//        val lat = location?.latitude.toString()
+//        val lon = location?.longitude.toString()
+//        if (lat?.isNotEmpty() && lon?.isNotEmpty()) {
+//            binding.viewModel?.setCurrentWeatherParams(
+//                CurrentWeatherUseCase.CurrentWeatherParams(
+//                    lat,
+//                    lon,
+//                    isNetworkAvailable(requireContext()),
+//                    Constants.Coords.METRIC
+//                )
+//            )
+//            binding.viewModel?.setForecastParams(
+//                ForecastUseCase.ForecastParams(
+//                    lat,
+//                    lon,
+//                    isNetworkAvailable(requireContext()),
+//                    Constants.Coords.METRIC
+//                )
+//            )
+//        }
+//        saveCoordsToSharedPref(lat,lon)
       //  easyWayLocation?.endUpdates()
         //easyWayLocation?.startLocation()
     }
