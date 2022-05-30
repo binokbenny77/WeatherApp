@@ -74,4 +74,4 @@ For changing the build envoirnment goto Constant.kt file and set
 ## Inside application
   <li>Splash screen</li>
     <li>Home screen for showing the weather for the current location</li>
-    <li>Search screen for searching the location and click or **star** for adding it into the davorite list</li>
+    <li>Search screen for searching the location and click on *(star) for adding it into the davorite list</li>
