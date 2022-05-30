@@ -30,6 +30,8 @@ object Versions {
     const val threetenabpVersion = "1.3.1"
     const val shadowViewVersion = "0.0.3"
     const val algoliaVersion = "3.+"
+    const val easyLocation = "2.2"
+    const val googleLocation = "18.0.0"
     const val stethoVersion = "1.6.0"
     const val timberVersion = "4.7.1"
 
@@ -111,6 +113,12 @@ object Dependencies {
 
     // algolia
     const val algolia = "com.algolia:algoliasearch-android:${Versions.algoliaVersion}"
+
+    //easyLocation
+    const val easyLocation = "com.github.prabhat1707:EasyWayLocation:${Versions.easyLocation}"
+
+    //googleLocation
+    const val gms = "com.google.android.gms:play-services-location:${Versions.googleLocation}"
 
     // stetho
     const val stethoCore = "com.facebook.stetho:stetho:${Versions.stethoVersion}"

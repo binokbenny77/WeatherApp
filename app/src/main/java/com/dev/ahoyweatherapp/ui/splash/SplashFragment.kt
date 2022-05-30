@@ -1,6 +1,7 @@
 package com.dev.ahoyweatherapp.ui.splash
 
 import android.graphics.Color
+import android.os.Handler
 import androidx.navigation.fragment.findNavController
 import com.dev.ahoyweatherapp.R
 import com.dev.ahoyweatherapp.core.BaseFragment
@@ -27,8 +28,8 @@ class SplashFragment : BaseFragment<SplashFragmentViewModel, FragmentSplashBindi
         if (binding.viewModel?.sharedPreferences?.getString(Constants.Coords.LON, "")
                 .isNullOrEmpty()
         ) {
-            binding.buttonExplore.show()
-            binding.viewModel?.navigateDashboard = false
+            binding.buttonExplore.hide()
+            binding.viewModel?.navigateDashboard = true
         } else {
             binding.buttonExplore.hide()
             binding.viewModel?.navigateDashboard = true
@@ -46,33 +47,14 @@ class SplashFragment : BaseFragment<SplashFragmentViewModel, FragmentSplashBindi
     }
 
     private fun startSplashAnimation(navigateToDashboard: Boolean) {
-        disposable.add(
-            RxAnimation.sequentially(
-                RxAnimation.together(
-                    binding.buttonExplore.fadeOut(0L),
-                ),
 
-                RxAnimation.together(
-
-                ),
-
-                RxAnimation.together(
-
-                ),
-
-                RxAnimation.together(
-
-                ),
-
-                binding.buttonExplore.fadeIn(1000L)
-            ).doOnTerminate {
-                findNavController().graph.setStartDestination(R.id.dashboardFragment) // Little bit tricky solution :)
-                if (navigateToDashboard) {
-                    endSplashAnimation(navigateToDashboard)
-                }
+        Handler().postDelayed(Runnable {
+            findNavController().graph.setStartDestination(R.id.dashboardFragment) // Little bit tricky solution :)
+            if (navigateToDashboard) {
+                endSplashAnimation(navigateToDashboard)
             }
-                .subscribe()
-        )
+        }, 3 * 1000)
+
     }
 
     private fun endSplashAnimation(navigateToDashboard: Boolean) {
@@ -98,7 +80,8 @@ class SplashFragment : BaseFragment<SplashFragmentViewModel, FragmentSplashBindi
                     if (navigateToDashboard) {
                         navigate(R.id.action_splashFragment_to_dashboardFragment)
                     } else {
-                        navigate(R.id.action_splashFragment_to_searchFragment)
+                       // navigate(R.id.action_splashFragment_to_searchFragment)
+                        navigate(R.id.action_splashFragment_to_dashboardFragment)
                     }
                 }
                 .subscribe()

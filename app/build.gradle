@@ -153,6 +153,9 @@ dependencies {
     // search
     implementation Dependencies.algolia
 
+    implementation Dependencies.easyLocation
+
+    implementation Dependencies.gms
     // test
     testImplementation Dependencies.junit
     testImplementation Dependencies.junitTestExt
